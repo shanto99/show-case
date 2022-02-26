@@ -1,0 +1,136 @@
+.preloader-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: url("../images/preloader-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.preloader-container .preloader-bar {
+    width: 2px;
+    height: 100%;
+    background: #ffffff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 1000ms;
+}
+
+.loader-bar-move-right {
+    left: 100% !important;
+    transform: translateX(0);
+}
+
+.loader-bar-move-left {
+    left: 0 !important;
+    transform: translateX(0);
+}
+
+.image-part,
+.video-part {
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: all 1000ms;
+    color: white;
+}
+
+.image-part h4,
+.video-part h4 {
+    transition: all 1000ms;
+}
+
+.image-part {
+    left: 0;
+}
+
+.image-part--expanded {
+    z-index: 9999;
+    width: 100%;
+    background-color: #3f3f3f;
+    border: none;
+}
+
+.video-part--expanded {
+    z-index: 9999;
+    width: 100%;
+    background-color: #3f3f3f;
+    border: none;
+}
+
+.image-part--expanded:hover {
+    border: none !important;
+}
+
+.video-part {
+    left: 50%;
+    transition: all 1000ms;
+}
+
+.video-part--expanded {
+    z-index: 9999;
+    left: 0;
+    width: 100%;
+    background-color: #3f3f3f;
+}
+
+.video-part--expanded:hover {
+    border: none !important;
+}
+
+.image-part:hover,
+.video-part:hover {
+    background-color: #5e5d5d21;
+    z-index: 999;
+    cursor: pointer;
+}
+.image-part:hover h4,
+.video-part:hover h4 {
+    transform: scale(1.5);
+}
+.image-part:hover {
+    border-right: 1px solid #fff;
+}
+.video-part:hover {
+    border-left: 1px solid #fff;
+}
+
+.preloader-bar .preloader-icon-img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 3000ms;
+}
+
+.explore-buttons-panel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: all 1000ms;
+    overflow: hidden;
+}
+
+.explore-buttons-panel--show {
+    opacity: 1;
+    display: block;
+}
+
+.fade-out {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;
+}
